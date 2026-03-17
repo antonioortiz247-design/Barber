@@ -1,0 +1,5 @@
+module.exports = {
+  content: ["./app/**/*.{js,ts,jsx,tsx}","./components/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: { colors: { primary:"#000", accent:"#C9A227" } } },
+  plugins: []
+};
