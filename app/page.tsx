@@ -1,13 +1,22 @@
-import Link from "next/link";
+import Link from 'next/link';
+import { format } from 'date-fns';
+import { Header } from '@/components/header';
+import { ServiceList } from '@/components/service-list';
+import { getServices } from '@/lib/data';
 
-export default function Home() {
+export default async function HomePage() {
+  const services = await getServices();
+  const today = format(new Date(), 'yyyy-MM-dd');
+
   return (
-    <main className="p-6">
-      <h1 className="text-3xl font-bold">Barbería Elite</h1>
-      <Link href="/booking">
-        <button className="mt-4 bg-black text-white px-6 py-3 rounded-xl">
-          Agendar cita
-        </button>
+    <main className="mx-auto min-h-screen w-full max-w-md px-4 py-6">
+      <Header />
+      <Link className="btn-primary mb-4 block text-center" href={`/book?date=${today}`}>
+        Agendar cita
+      </Link>
+      <ServiceList services={services} />
+      <Link href="/admin/login" className="mt-6 inline-block text-sm text-white/50 underline">
+        Acceso administrador
       </Link>
     </main>
   );
