@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Barber icon">
+  <rect width="192" height="192" rx="32" fill="#050505"/>
+  <circle cx="96" cy="96" r="64" fill="#d4af37"/>
+  <text x="96" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#050505">B</text>
+</svg>
